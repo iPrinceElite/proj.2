@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login & Signup</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* PART 1: Naya gradient - orange to purple vibe */
+            background: linear-gradient(135deg, #ff6b6b, #4ecdc4, #45b7d1);
+            font-family: 'Poppins', sans-serif; /* PART 2: Google font lagaya */
+        }
+
+        .container {
+            width: 380px; /* Thoda bara kiya */
+            background: white;
+            padding: 45px; /* PART 3: Padding increase */
+            border-radius: 15px;
+            /* PART 3: Border add kiya */
+            border: 2px solid #e9ecef;
+            /* PART 3: Shadow effect improve */
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15), 0 10px 20px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 25px;
+            /* PART 2: Heading changes */
+            font-size: 28px; /* Size increase */
+            text-transform: uppercase; /* Uppercase */
+            letter-spacing: 3px; /* Letter spacing */
+            font-weight: 700;
+            color: #333;
+        }
+
+        input {
+            width: 100%;
+            padding: 15px;
+            margin: 15px 0; /* PART 3: Margin between inputs */
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            outline: none;
+            font-size: 16px;
+            transition: 0.3s;
+            /* PART 1: Focus border color */
+            font-family: 'Poppins', sans-serif;
+        }
+
+        input:focus {
+            border-color: #4ecdc4; /* Focus mein green color */
+            box-shadow: 0 0 10px rgba(78, 205, 196, 0.3);
+        }
+
+        button {
+            width: 100%;
+            padding: 15px;
+            /* PART 1: Button color change */
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 15px;
+            font-size: 16px;
+            font-weight: 600;
+            font-family: 'Poppins', sans-serif;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            /* PART 1: Hover effect */
+            background: linear-gradient(45deg, #5a67d8, #5f3db2);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+        }
+
+        .toggle {
+            margin-top: 20px;
+            font-size: 15px;
+            color: #666;
+        }
+
+        .toggle span {
+            color: #4ecdc4;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        .form {
+            display: none;
+        }
+
+        #login:target, #signup:target {
+            display: block;
+        }
+
+        #login {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Login Form -->
+        <div id="login" class="form">
+            <h2>Login</h2>
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="Password" required>
+            <button>Login</button>
+            <div class="toggle">
+                Don't have an account? 
+                <a href="#signup"><span>Sign up</span></a>
+            </div>
+        </div>
+
+        <!-- Signup Form -->
+        <div id="signup" class="form">
+            <h2>Sign Up</h2>
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="Password" required>
+            <button>Sign Up</button>
+            <div class="toggle">
+                Already have an account? 
+                <a href="#login"><span>Login</span></a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
